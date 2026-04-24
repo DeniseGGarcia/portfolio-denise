@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio | Denise Gonçalves</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+      <div class="header-container">
+        <button id="btn-tema" class="botao-tema">🌓 Alternar Tema</button>
+             <nav>
+                 <ul>
+                     <li><a href="#sobre">Sobre Mim</a></li>
+                     <li><a href="#formacao">Formação</a></li>
+                     <li><a href="#portfolio">Portfólio</a></li>
+                     <li><a href="#contato">Contato</a></li>
+                 </ul>
+             </nav>
+       </div> 
+    </header>
+
+    <main>
+         <section id="sobre">
+             <h1>Sobre Mim</h1>
+        
+             <div class="foto-moldura">
+                 <img src="imagens/foto-perfil.JPEG" alt="Foto de Denise Gonçalves" class="foto-perfil">
+             </div>
+
+             <div class="texto-sobre">
+                  <p>Olá! Sou Denise, uma profissional em transição de carreira da Odontologia para a Ciência de Dados.</p>
+                  <p>Atualmente moro em São Paulo e sou apaixonada por resolver problemas através da tecnologia.</p>
+             </div>
+         </section>
+
+        <section id="formacao">
+            <h2>Formação Acadêmica</h2>
+            <ul>
+                <li>Graduação em Odontologia (Concluída aos 22 anos)</li>
+                <li>Pós-graduação em Administração de Empresas - FGV</li>
+                <li>Bootcamp de Data Analytics - WomakersCode</li>
+                <li>Cursando Tecnologia em Ciência de Dados</li>
+            </ul>
+        </section>
+
+        <section id="portfolio">
+             <h2>Meu Portfólio</h2>
+             <p>Aqui estão alguns dos projetos técnicos que desenvolvi:</p>
+
+             <div class="projeto">
+                 <h3>Análise de Incidência de Câncer no Mundo</h3>
+                 <p><strong>Tecnologias:</strong> Python, Pandas, Matplotlib/Seaborn.</p>
+                 <p>Neste projeto, utilizei Python para investigar as taxas de incidência de câncer globalmente, gerando visualizações para comparação entre regiões.</p>
+    
+                 <img src="imagens/cancer-mundo.png" alt="Gráfico de análise de câncer" class="img-projeto">
+    
+                 <div class="links-projeto">
+                     <a href="analise-cancer.ipynb" download>Baixar Notebook (.ipynb)</a>
+                     <a href="https://github.com/SEU_USUARIO" target="_blank">Ver no GitHub</a>
+                 </div>
+             </div>
+
+             <div class="projeto">
+                 <h3>Modelo Perceptron em Excel</h3>
+                 <p><strong>Tecnologias:</strong> Microsoft Excel / Lógica de Redes Neurais.</p>
+                 <p>Simulação de uma rede neural simples demonstrando o ajuste de pesos.</p>
+    
+                 <div class="links-projeto">
+                      <a href="modelo-perceptron.xlsx" download>Baixar Modelo Excel</a>
+                 </div>
+             </div>
+            
+        </section>
+
+        <section id="contato">
+            <h2>Contato</h2>
+            <form id="formContato">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" placeholder="Seu nome completo">
+
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" placeholder="seu@email.com">
+
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" rows="4"></textarea>
+
+                <button type="submit">Enviar Mensagem</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Denise Garcia de Oliveira Gonçalves</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,223 @@
+/* Variáveis para um visual Moderno e Aesthetic */
+:root {
+    --primary-color: #6c5ce7; /* Roxo vibrante moderno */
+    --secondary-color: #a29bfe; /* Roxo claro */
+    --bg-color: #f9f9fb; /* Fundo off-white */
+    --text-color: #2d3436; /* Cinza escuro */
+    --card-bg: #ffffff; /* Fundo branco dos cards */
+}
+
+/* Configurações Gerais */
+body {
+    font-family: 'Open Sans', sans-serif; /* Fonte do Google Fonts */
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    line-height: 1.8;
+}
+
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif; /* Fonte de títulos */
+    color: var(--text-color);
+}
+
+/* MENU DE NAVEGAÇÃO - Requisito obrigatório */
+header {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px); /* Efeito de vidro desfocado */
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li { margin: 0 15px; }
+
+nav ul li a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+    padding: 5px 15px;
+}
+
+nav ul li a:hover {
+    color: var(--secondary-color);
+    background: #f0efff;
+    border-radius: 20px; /* Cantos arredondados no menu */
+}
+
+/* Container Principal */
+main {
+    margin-top: 100px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+}
+
+/* SEÇÕES COMO CARDS - Boa Diagramação */
+section {
+    background: var(--card-bg);
+    margin-bottom: 40px;
+    padding: 40px;
+    border-radius: 20px; /* Cantos bem arredondados */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05); /* Sombra suave */
+}
+
+/* FOTO DE PERFIL - */
+.foto-perfil {
+    width: 180px;         /* Largura fixa */
+    height: 180px;        /* Altura fixa igual à largura */
+    border-radius: 30%;   /* Faz o círculo perfeito */
+    object-fit: cover;    /* Garante que o rosto não fique esticado */
+    display: block;
+    margin: 0 auto 20px;
+    border: 1px solid var(--secondary-color);
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Transição suave */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+/* Efeito de Mini Zoom ao passar o mouse */
+.foto-perfil:hover {
+    transform: scale(1.1); /* Aumenta 10% */
+    cursor: pointer;
+}
+
+/* Conteúdo Sobre Mim */
+.perfil-container {
+    text-align: center;
+}
+
+/* Estilo dos Projetos */
+.projeto {
+    border-left: 4px solid var(--primary-color);
+    padding-left: 20px;
+    margin: 20px 0;
+}
+
+.img-projeto {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 15px;
+    margin: 15px 0;
+    border: 1px solid #eee;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* BOTÕES BONITOS E AESTHETIC */
+.projeto a, button[type="submit"] {
+    background: var(--primary-color);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 30px; 
+    text-decoration: none;
+    border: none;
+    display: inline-block;
+    transition: 0.3s ease;
+    cursor: pointer;
+    font-weight: 600;
+    font-family: inherit;
+    box-shadow: 0 4px 10px rgba(108, 92, 231, 0.3); /* Sombra colorida suave */
+}
+
+.projeto a:hover, button[type="submit"]:hover {
+    background: var(--secondary-color);
+    transform: translateY(-3px); /* Levanta levemente o botão */
+    box-shadow: 0 6px 15px rgba(108, 92, 231, 0.4);
+}
+
+/* Formulário de Contato Refinado */
+#formContato {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 500px;
+}
+
+input, textarea {
+    font-family: 'Open Sans', sans-serif;
+    padding: 12px 15px;
+    border: 2px solid #eee;
+    border-radius: 10px;
+    background-color: #fcfcfd;
+    transition: 0.3s;
+    outline: none;
+}
+
+input:focus, textarea:focus {
+    border-color: var(--primary-color);
+    background-color: #fff;
+    box-shadow: 0 0 0 4px rgba(108, 92, 231, 0.1);
+}
+
+label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: -10px;
+}
+
+button[type="submit"] {
+    align-self: flex-start; /* Botão não ocupa a linha toda */
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #777;
+    font-size: 0.9rem;
+}
+
+/* --- TEMA ESCURO (JavaScript aplicará esta classe) --- */
+body.dark-mode {
+    --bg-color: #1e272e;
+    --text-color: #f1f2f6;
+    --card-bg: #2f3542;
+}
+
+body.dark-mode header {
+    background: rgba(30, 39, 46, 0.9);
+}
+
+body.dark-mode section {
+    background: var(--card-bg);
+}
+
+/* Botão de Tema */
+.botao-tema {
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    background: var(--secondary-color);
+    margin-right: 20px;
+}
+
+/* --- RESPONSIVIDADE (Menu dinâmico) --- */
+@media (max-width: 600px) {
+    .header-container {
+        flex-direction: column;
+        padding: 10px;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+    
+    main {
+        margin-top: 180px; /* Evita que o menu cubra o conteúdo no celular */
+    }
+}
