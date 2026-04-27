@@ -10,20 +10,20 @@ form.addEventListener('submit', function(event) {
     const email = document.getElementById('email').value.trim();
     const mensagem = document.getElementById('mensagem').value.trim();
 
-    // Validação de campos vazios (Requisito 5)
+    // Validação de campos vazios 
     if (nome === '' || email === '' || mensagem === '') {
         alert('Por favor, preencha todos os campos.');
         return;
     }
 
-    // Validação de formato de e-mail (Requisito 5)
+    // Validação de formato de e-mail 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
         alert('Por favor, insira um e-mail válido.');
         return;
     }
 
-    // Simulação de envio com sucesso (Requisito 5)
+    // Simulação de envio com sucesso 
     alert('Mensagem enviada com sucesso!');
     form.reset(); // Limpa os campos
 });
@@ -43,7 +43,3 @@ btnTema.addEventListener('click', () => {
     }
 });
 
-
-
-/* Comentário: O uso do classList.toggle permite que o usuário 
-   escolha o tema de sua preferência (Claro ou Escuro). */
